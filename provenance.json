@@ -1,0 +1,12 @@
+{
+  "model": "humanoid-gpt",
+  "submitter": "Motion Challenge",
+  "submission_type": "maintainer reproduction, not author submission",
+  "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "checkpoint_sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e",
+  "author_inference_review": "pending",
+  "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
+  "legacy_results": "not transferable to this adapter revision without rerunning",
+  "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms"
+}

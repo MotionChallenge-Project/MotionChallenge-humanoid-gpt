@@ -1,0 +1,45 @@
+{
+  "id": "humanoid-gpt-g1-development-v1",
+  "entrypoint": "adapter:create",
+  "control_period_s": 0.02,
+  "reference_step_s": 0.02,
+  "reference_steps": [
+    0,
+    1
+  ],
+  "reference_offsets_s": [
+    0.0,
+    0.02
+  ],
+  "reference_history_s": 0,
+  "reference_preview_s": 0.02,
+  "state_access": "privileged-state-v0",
+  "action_mode": "joint-pd-feedforward",
+  "inference_config": "policy.json",
+  "inference_config_sha256": "78803b1126d2867f9b3e852ba32e37ce956962fe7df66922d2ea6462d6ef32ed",
+  "weights": "checkpoints/policy.onnx",
+  "weights_sha256": "1ca1f475dc647afb736f4cdbd55d45103c36b7f5059d830b05d6aef3a5fc3a1e",
+  "virtual_bodies": {
+    "left_toe_link": {
+      "parent": "left_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    },
+    "right_toe_link": {
+      "parent": "right_ankle_roll_link",
+      "position_parent_m": [
+        0.1,
+        0.0,
+        -0.02
+      ]
+    }
+  },
+  "provenance_status": "author-inference review in progress",
+  "official": false,
+  "source_repository": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "weights_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx"
+}
