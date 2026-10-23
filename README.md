@@ -26,3 +26,9 @@ download and evaluation progress updates every 5 seconds.
 
 Run all frames after tracking failure: `uv run evaluate.py --termination none`.
 This records full-motion errors under a separate protocol; success still requires no failure.
+
+## Checkpoint source
+
+[GalaxyGeneralRobotics/Humanoid-GPT](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/README.md) · [pns_wo_priv216.onnx](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx). Author-released checkpoint.
+
+The adapter pins this published artifact by SHA256. Artifact identity is separate from inference parity.
