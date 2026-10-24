@@ -1,16 +1,7 @@
-# Native inference validation
+# Inference validation
 
-`native-parity.json` (macOS) and `native-parity-linux.json` compare the adapter
-with the pinned original inference over 160 states, four resets and 32 endpoint
-cases. Both pass the fixed `2e-5` absolute tolerance. The reports disclose
-platform-specific differences; they do not claim universal bitwise equivalence.
+Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and action history. No measured robot position or position integration.
 
-```bash
-uv run validate_inference.py --source /path/to/author-source --weights /path/to/pns_wo_priv264.onnx --output /outside/repository/parity.json
-```
+[Script](../validate_inference.py) · [Author source pins](../native-sources.json) · [macOS report](native-parity.json) · [Linux report](native-parity-linux.json).
 
-`native-sources.json` pins the author files. The comparison covers reference
-filtering, feature kinematics, observations, actions, history and motor targets.
-
-`checkpoint-graph.json` describes the released 264 MLP. The separate
-`pns_wo_priv216_trans.onnx` Transformer is not evaluated by this adapter.
+160 cases and4 independent resets, with the original checkpoint. Full benchmark results require separate complete-motion verification.

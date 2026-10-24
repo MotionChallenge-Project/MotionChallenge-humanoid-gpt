@@ -3,7 +3,7 @@
   "model": "humanoid-gpt",
   "display_name": "Humanoid-GPT 264",
   "state_access": "ideal-proprioceptive-no-position-v1",
-  "status": "requires_author_deployment_validation",
+  "status": "inference_verified",
   "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
   "auxiliary_artifacts": {},
   "checkpoint_origin": {
@@ -22,23 +22,26 @@
   "author_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
   "base_adapter_commit": "e3c7372ee1f3ae6d05cd025a8f1fa0bcf03b98d5",
   "production_source_sha256": {
-    "adapter.py": "6e7b6868c9653fa3d27879f0b88a4a06dc587d67b460b3bf89419ccd11ca23d3",
+    "adapter.py": "cface7fc94a9286ff15f1ac20adfd4af6f5707f71d58392089000f553d29250b",
     "evaluate.py": "0ebb8c761f00dd963f2e45c85ecb94628273911bb1edfc0f2621e8fc458cb4ff",
     "native-sources.json": "4912ca785df415479ecd6d7f008d76e863653e74adbca806c4134ed650f32503",
     "policy.json": "a1299b54247aa4d8c6923a178af52713e0619ef61a86164470dd9c6156199aaa",
     "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
-    "validate_inference.py": "5e9e18c4a18a2b1968d8dd552e2dbaeb4fc17c31e2cb1f10e653455b99e84f93"
+    "validate_inference.py": "707a548efce3d164b512b4b347346f583a4b99b76a59704c5c1160ddecda8aaa"
   },
   "prior_native_parity_sha256": {
-    "validation/native-parity-linux.json": "614ca6654a790b66c6ac4c69e7e2238afed92822dabe95f052d9eb61e92b3987",
-    "validation/native-parity.json": "5bde150d548cf953fc46ffb4af0abf038d9936905e112bcadeebac7641850c83"
+    "validation/native-parity.json": "b207a51f52037ed7cfc32382c695a0725358c92c6dbef71ca74f805179c93181",
+    "validation/native-parity-linux.json": "bf3e9b5d1db1ef5850026128b13db1e8a22b088d73ab7deadb24e6c2c2da5b7c"
   },
-  "handling": "Current adapter uses actual XY in command. Author real_robot sets root XYZ to [0,0,0.78]; exact same weight, heading/reference processing and reset behavior must be verified for that path.",
-  "actual_position_integration": "No explicit integration or odometry in the inspected deployed adapter source; blocked paths are listed separately.",
-  "special_handling": "Current adapter uses actual XY in command. Author real_robot sets root XYZ to [0,0,0.78]; exact same weight, heading/reference processing and reset behavior must be verified for that path.",
-  "new_evaluation": {
-    "status": "not_started",
-    "inherited_scores": false
-  },
-  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt"
+  "handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and action history. No measured robot position or position integration.",
+  "actual_position_integration": "No measured robot translation, contact inputs or explicit position integration.",
+  "special_handling": "Author infer_onnx_real hardware route: fixed synthetic root [0,0,0.78], author reference FK, EMA and action history. No measured robot position or position integration.",
+  "repository": "https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt",
+  "dependency_test": {
+    "path": "validation/observation-access.json",
+    "sha256": "9721b0bb85913035d20d967bedde51366e166dca139b9acfcbcd72ba29d2db59",
+    "code": "validate_inference.py",
+    "cases": 160,
+    "resets": 4
+  }
 }
