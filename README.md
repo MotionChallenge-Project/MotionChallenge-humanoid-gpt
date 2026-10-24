@@ -1,6 +1,6 @@
-# MotionChallenge · humanoid-gpt
+# Humanoid-GPT 264
 
-[Author project](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT) · [Checkpoint](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx) · [Provenance](provenance.json)
+[Author project](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT) · [Checkpoint](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx) · [Provenance](provenance.json)
 
 ## Install and run
 
@@ -11,13 +11,8 @@ uv sync
 uv run evaluate.py
 ```
 
-One full rollout per motion produces success, completion and all six MPBPE values
-in one verified `result.json`. MuJoCo 3.17 CPU batch; `--jobs 8` sets rollout and
-verification parallelism. Progress updates every five seconds.
+Produces success, completion and six MPBPE values in a verified `result.json`.
+MuJoCo 3.17 CPU batch; `--jobs 8` sets parallelism. Missing data and weights are
+downloaded and hash-checked; results and traces stay outside Git.
 
-Missing data and weights are downloaded and hash-checked. Cached files can be
-selected with `--weights PATH --data PATH --offline`. Results and traces stay
-outside Git.
-
-This repository adapts model inference. The pinned root `MotionChallenge-Core`
-submodule owns datasets, physics, metrics and verification. See `--help` for options.
+[Inference validation](validation/README.md) · [Native parity report](validation/native-parity.json)
