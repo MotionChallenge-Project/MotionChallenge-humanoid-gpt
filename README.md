@@ -1,12 +1,12 @@
-# Motion Challenge · humanoid-gpt
+# MotionChallenge · humanoid-gpt
 
 [Author project](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT) · [Checkpoint](https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv216.onnx) · [Provenance](provenance.json)
 
 ## Install and run
 
 ```bash
-git clone --recurse-submodules https://github.com/MotionChallenge-Project/motion-challenge-humanoid-gpt.git
-cd motion-challenge-humanoid-gpt
+git clone --recurse-submodules https://github.com/MotionChallenge-Project/MotionChallenge-humanoid-gpt.git
+cd MotionChallenge-humanoid-gpt
 uv sync
 uv run evaluate.py
 ```

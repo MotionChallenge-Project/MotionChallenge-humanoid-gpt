@@ -1,6 +1,6 @@
 {
   "model": "humanoid-gpt",
-  "submitter": "Motion Challenge",
+  "submitter": "MotionChallenge",
   "submission_type": "maintainer reproduction, not author submission",
   "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
   "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
