@@ -5,7 +5,7 @@
 ## Install and run
 
 ```bash
-git clone --recurse-submodules https://github.com/motion-challenge-project/motion-challenge-humanoid-gpt.git
+git clone --recurse-submodules https://github.com/MotionChallenge-Project/motion-challenge-humanoid-gpt.git
 cd motion-challenge-humanoid-gpt
 uv sync
 uv run evaluate.py
