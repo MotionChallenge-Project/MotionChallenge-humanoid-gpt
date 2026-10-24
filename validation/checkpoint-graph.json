@@ -1,0 +1,61 @@
+{
+  "checkpoint": "pns_wo_priv264.onnx",
+  "sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "operators": {
+    "Gemm": 4,
+    "Sigmoid": 3,
+    "Mul": 3,
+    "Identity": 1
+  },
+  "linear_layers": [
+    {
+      "operator": "Gemm",
+      "parameters": {
+        "mlp.0.weight": [
+          2048,
+          136
+        ],
+        "mlp.0.bias": [
+          2048
+        ]
+      }
+    },
+    {
+      "operator": "Gemm",
+      "parameters": {
+        "mlp.2.weight": [
+          1024,
+          2048
+        ],
+        "mlp.2.bias": [
+          1024
+        ]
+      }
+    },
+    {
+      "operator": "Gemm",
+      "parameters": {
+        "mlp.4.weight": [
+          512,
+          1024
+        ],
+        "mlp.4.bias": [
+          512
+        ]
+      }
+    },
+    {
+      "operator": "Gemm",
+      "parameters": {
+        "mean_head.weight": [
+          29,
+          512
+        ],
+        "mean_head.bias": [
+          29
+        ]
+      }
+    }
+  ],
+  "interpretation": "The inspected released264 ONNX is a four-layer feed-forward policy with three SiLU activations. This graph evidence describes these checkpoint bytes; it does not identify them as the Transformer from the paper."
+}

@@ -5,7 +5,7 @@
   "upstream": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT",
   "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
   "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
-  "author_inference_review": "Passed160 states,4 resets,32 endpoint cases, quaternion sign flips and shuffled joint order. Reference qpos/cvel, observations, actions, action history and motor targets match the author implementation exactly.",
+  "author_inference_review": "160 states, 4 resets and 32 endpoint cases passed the fixed 2e-5 tolerance on macOS and Linux. macOS comparisons were exact; Linux maximum observation/action difference was 5.25e-6 and motor-target difference 2.33e-6 rad.",
   "benchmark_physics": "shared G1 canonical profile, not the author training simulator",
   "legacy_results": "not transferable to this adapter revision without rerunning",
   "redistribution": "checkpoint not distributed in Git; obtain from recorded upstream URL under its original terms",
@@ -31,5 +31,10 @@
     "reset": "Fresh filter and zero last action for each clip, equivalent to an independently constructed author inference instance. Canonical initial pose/velocity remain fixed.",
     "output": "Author gain/scaling constants without decimal truncation; float32 motor-target assignment; no additional action clipping. Native PD torque and canonical actuator limits remain kernel-owned.",
     "legacy": "The unranked216 adapter/result is not reused. All264 benchmark results require fresh full-suite runs."
-  }
+  },
+  "inference_validation_platforms": {
+    "macOS": "validation/native-parity.json",
+    "Linux": "validation/native-parity-linux.json"
+  },
+  "checkpoint_architecture": "Released 264 ONNX: 136-input feed-forward MLP, hidden widths 2048/1024/512, 29-action output. See validation/checkpoint-graph.json. Scores do not apply to the separate 216_trans Transformer checkpoint."
 }
