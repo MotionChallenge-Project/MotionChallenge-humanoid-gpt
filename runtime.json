@@ -28,6 +28,8 @@
   "kinematics_sha256": "763c3f5c9cf453b950bcee7c18ffe230d75c973745ebb99fd3c13a9e07918bf6",
   "observation_contract": {
     "admission_record": "admission.json",
-    "admission_sha256": "a019dd5e8f36a5b7da7b4375af9b86c8429f7b49a471172ceb8d190ba425c0b9"
-  }
+    "admission_sha256": "122f2cb8232d977fd7f0087388a2ac90f2ee61dbf0f5c52b338917b7a1ed7775"
+  },
+  "batch_entrypoint": "parallel:create",
+  "inference_workers": 4
 }
