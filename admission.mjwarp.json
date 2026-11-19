@@ -1,0 +1,34 @@
+{
+  "state_access": "proprioceptive-no-position-no-linear-velocity-v1",
+  "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "status": "inference_verified",
+  "reason": "Strict tensor observations, original inference parity and full-batch conversion checks passed.",
+  "schema": "MotionChallenge/observation-admission-v1",
+  "model": "humanoid-gpt",
+  "evidence_sha256": {
+    "validation/mjwarp-network-parity.json": "df72bec46f569617cc5692be6c48e8c459aa5bd58be5e087c9f4bf4880d0c1cd",
+    "validation/full-batch-parity.json": "d30b4cdecac99e6a47cbeaa6ad7e4ffd311428a7c4b2421b5a94b6dbb9db52a3",
+    "validation/tensor-observation-parity.json": "1c059eaa13b458fe9c9232b335405282dc20246d9a2931409b7d85c28b4f1087"
+  },
+  "production_source_sha256": {
+    "tensor_common.py": "518fc3b40e5c38078d1d2fce4cf7133f6aa614b442152a01fdbbd5e600401a2e",
+    "validate_batch.py": "9b9a640583cf0bea9c7df2cdff456ee7eb73d9badb2df1151e4d1784bc66356c",
+    "torch_graph.py": "7fd92161cb5465f0f2eb91429009dc3c6b6c4a4fb533300228f9c4262b6a4d4f",
+    "adapter.py": "cface7fc94a9286ff15f1ac20adfd4af6f5707f71d58392089000f553d29250b",
+    "parallel.py": "4c1e1e89b116d7418147225054f024d338971bf838f5f6d6c28ebecc741d013a",
+    "tensor_reference.py": "a2cb49dc3e652219d9781557b86369b245b7464371b037d69f45974c819dc1be",
+    "convert_weights.py": "486998deef93d9f21d7ae21b2c9ab68721a7d300e4311fe934eb3b31b25df75f",
+    "validate_tensor.py": "9f3b1274f2ea6238f3970ec44018987cdb7293234c8e160a37f1a9dcc8914bd7",
+    "evaluate.py": "f89bd2cf0333e7f5639431d6976253da3ad6ef8d490340362f4b4630d533d071",
+    "validate_inference.py": "707a548efce3d164b512b4b347346f583a4b99b76a59704c5c1160ddecda8aaa",
+    "reference.py": "eca6466f3bbcf094750144eaa2de4eeb3fd7850f6a882e77b0e8e389fb50b55b",
+    "tensor_adapter.py": "f5789a75324f32e5efdda873740efea9650d436cb0402590061ce6365c22ed36"
+  },
+  "dataset_evaluation": {
+    "lafan_report": "validation/lafan-mjwarp.json",
+    "seed_report": "validation/seed-mjwarp.json",
+    "seed_attempt_report": "validation/seed-attempt.json",
+    "reproduction_report": "validation/lafan-reproduction.json",
+    "numerical_failure_report": "validation/cpu-mjwarp-instability-replay.json"
+  }
+}

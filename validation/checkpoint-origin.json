@@ -1,0 +1,23 @@
+{
+  "status": "author_release_verified",
+  "model": "humanoid-gpt",
+  "author_release_url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+  "artifact_url": "https://raw.githubusercontent.com/GalaxyGeneralRobotics/Humanoid-GPT/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+  "sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "source_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "artifact_bytes": 11675419,
+  "verified_at": "2026-11-19T05:06:36.992298+00:00",
+  "verification_scope": "Official author release link chain and complete artifact download SHA256. The downloaded bytes exactly match the original checkpoint used in the recorded evaluations. Conversion and controller parity are separately recorded; this record does not assert rollout success.",
+  "download_verification": {
+    "method": "fresh_complete_https_download_on_mac",
+    "sha256_matches_evaluated_original": true
+  },
+  "release_evidence": [
+    {
+      "url": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/storage/ckpts/pns_wo_priv264.onnx",
+      "kind": "artifact_in_pinned_author_repository"
+    }
+  ],
+  "conversion_evidence": "mjwarp-network-parity.json",
+  "independent_onnxruntime_evidence": "onnxruntime-parity.json"
+}

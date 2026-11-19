@@ -1,0 +1,41 @@
+{
+  "status": "full_rollout_failed",
+  "slots": 4096,
+  "runtime_sha256": "ef5eb76b3cdd5d0335b3cb20299476aa5d410c72b705337199a855c36e6b8a27",
+  "returncode": 1,
+  "resource_capacity_failure": false,
+  "diagnostics": {
+    "status": "failed",
+    "error": "FloatingPointError('Non-finite MJWarp state')",
+    "diagnostic_wrapper_sha256": "0721c6c40f5291c169e024586ae0f7f0b427ea8c70b575ec0b19a116641f6fe2",
+    "criterion": "First active-slot nonfinite state/control or abs(qvel/qacc)>1e10; observations only, no physics changes",
+    "slots": [
+      2364
+    ],
+    "engine": {
+      "backend": "mjwarp",
+      "precision": "torch.float32",
+      "versions": {
+        "mujoco": "3.11.0",
+        "mujoco-warp": "3.11.0",
+        "warp-lang": "1.18.0",
+        "torch": "2.14.1"
+      },
+      "worlds": 4096,
+      "substeps": 4,
+      "nconmax": 100,
+      "njmax": 4096,
+      "cuda_graph": true
+    },
+    "torch_peak_allocated_bytes": 31591011840,
+    "clips": [
+      {
+        "slot": 2364,
+        "clip_id": 108266,
+        "name": "g1/csv/230713/grovel_for_mercy_R_001__A431_M.csv",
+        "time_s": 14.379999999999782
+      }
+    ]
+  },
+  "independent_check_report": "validation/seed-numerical-failure.json"
+}

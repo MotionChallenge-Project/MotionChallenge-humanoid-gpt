@@ -1,0 +1,151 @@
+{
+  "status": "original_network_parity_passed_cpu_failure_replayed",
+  "original_checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "captured_input_sha256": "2f5d55e023908d04f49b0dcc3a55b525f1abf6fa5921a4723abbbaba99f79f4d",
+  "diagnostics": {
+    "status": "failed",
+    "error": "FloatingPointError('Non-finite MJWarp state')",
+    "diagnostic_wrapper_sha256": "0721c6c40f5291c169e024586ae0f7f0b427ea8c70b575ec0b19a116641f6fe2",
+    "criterion": "First active-slot nonfinite state/control or abs(qvel/qacc)>1e10; observations only, no physics changes",
+    "slots": [
+      2364
+    ],
+    "engine": {
+      "backend": "mjwarp",
+      "precision": "torch.float32",
+      "versions": {
+        "mujoco": "3.11.0",
+        "mujoco-warp": "3.11.0",
+        "warp-lang": "1.18.0",
+        "torch": "2.14.1"
+      },
+      "worlds": 4096,
+      "substeps": 4,
+      "nconmax": 100,
+      "njmax": 4096,
+      "cuda_graph": true
+    },
+    "torch_peak_allocated_bytes": 31591011840,
+    "clips": [
+      {
+        "slot": 2364,
+        "clip_id": 108266,
+        "name": "g1/csv/230713/grovel_for_mercy_R_001__A431_M.csv",
+        "time_s": 14.379999999999782
+      }
+    ]
+  },
+  "original_onnx_runtime": {
+    "onnxruntime": "1.30.0",
+    "providers": [
+      "CPUExecutionProvider"
+    ]
+  },
+  "original_action_max_abs": 41853.859375,
+  "converted_cpu_action_max_abs_error": 0.0234375,
+  "actual_gpu_target_max_abs_error_vs_original": 0.002197265625,
+  "parity_tolerance": {
+    "absolute": 5e-05,
+    "relative": 5e-05
+  },
+  "initial_qvel_max_abs": 72809.0703125,
+  "overflow_flags": [
+    0
+  ],
+  "constraint_counts": [
+    0
+  ],
+  "cpu_mujoco_version": "3.11.0",
+  "cpu_replays": [
+    {
+      "variant": "external_pd",
+      "substeps": [
+        {
+          "substep": 1,
+          "time_before": 14.379999999999782,
+          "time_after": 14.384999999999783,
+          "qvel_max_abs": 5312629.072226951,
+          "qpos_max_abs": 26285.654150197253,
+          "finite": true,
+          "warnings": []
+        },
+        {
+          "substep": 2,
+          "time_before": 14.384999999999783,
+          "time_after": 0.005,
+          "qvel_max_abs": 0.04905,
+          "qpos_max_abs": 1.0,
+          "finite": true,
+          "warnings": [
+            {
+              "type": "mjWARN_BADQACC",
+              "number": 1,
+              "lastinfo": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "builtin_affine_pd",
+      "substeps": [
+        {
+          "substep": 1,
+          "time_before": 14.379999999999782,
+          "time_after": 14.384999999999783,
+          "qvel_max_abs": 5312629.072226951,
+          "qpos_max_abs": 26285.654150197253,
+          "finite": true,
+          "warnings": []
+        },
+        {
+          "substep": 2,
+          "time_before": 14.384999999999783,
+          "time_after": 0.005,
+          "qvel_max_abs": 0.04905000000000003,
+          "qpos_max_abs": 1.0,
+          "finite": true,
+          "warnings": [
+            {
+              "type": "mjWARN_BADQACC",
+              "number": 1,
+              "lastinfo": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "zero_torque",
+      "substeps": [
+        {
+          "substep": 1,
+          "time_before": 14.379999999999782,
+          "time_after": 14.384999999999783,
+          "qvel_max_abs": 5312628.899590914,
+          "qpos_max_abs": 26285.65328701707,
+          "finite": true,
+          "warnings": []
+        },
+        {
+          "substep": 2,
+          "time_before": 14.384999999999783,
+          "time_after": 0.005,
+          "qvel_max_abs": 0.04905,
+          "qpos_max_abs": 1.0,
+          "finite": true,
+          "warnings": [
+            {
+              "type": "mjWARN_BADQACC",
+              "number": 1,
+              "lastinfo": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "production_changed": false,
+  "scored_result": false,
+  "scope": "A late captured state and identical controls; not a fresh closed-loop counterfactual or proof of a unique instability cause."
+}

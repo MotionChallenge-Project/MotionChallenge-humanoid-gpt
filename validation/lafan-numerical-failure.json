@@ -1,0 +1,151 @@
+{
+  "control_step": 1851,
+  "time_s": 37.02,
+  "bad_slots": [
+    30
+  ],
+  "before_qpos_finite": true,
+  "before_qvel_finite": true,
+  "commands_finite": true,
+  "engine": {
+    "backend": "mjwarp",
+    "precision": "torch.float32",
+    "versions": {
+      "mujoco": "3.11.0",
+      "mujoco-warp": "3.11.0",
+      "warp-lang": "1.18.0",
+      "torch": "2.14.1"
+    },
+    "worlds": 40,
+    "substeps": 4,
+    "nconmax": 100,
+    "njmax": 4096,
+    "cuda_graph": true
+  },
+  "recent": [
+    {
+      "step": 1840,
+      "qpos_max": 20.09581184387207,
+      "qvel_max": 62.41319274902344,
+      "target_max": 20.350923538208008
+    },
+    {
+      "step": 1841,
+      "qpos_max": 20.247356414794922,
+      "qvel_max": 43.080162048339844,
+      "target_max": 16.46795654296875
+    },
+    {
+      "step": 1842,
+      "qpos_max": 20.484027862548828,
+      "qvel_max": 54.427764892578125,
+      "target_max": 11.763641357421875
+    },
+    {
+      "step": 1843,
+      "qpos_max": 20.697975158691406,
+      "qvel_max": 90.48943328857422,
+      "target_max": 16.85807991027832
+    },
+    {
+      "step": 1844,
+      "qpos_max": 20.87277603149414,
+      "qvel_max": 58.81765365600586,
+      "target_max": 13.22555923461914
+    },
+    {
+      "step": 1845,
+      "qpos_max": 21.026901245117188,
+      "qvel_max": 120.19965362548828,
+      "target_max": 13.193285942077637
+    },
+    {
+      "step": 1846,
+      "qpos_max": 21.202783584594727,
+      "qvel_max": 137.12481689453125,
+      "target_max": 22.47158432006836
+    },
+    {
+      "step": 1847,
+      "qpos_max": 21.415952682495117,
+      "qvel_max": 71.80682373046875,
+      "target_max": 20.52096176147461
+    },
+    {
+      "step": 1848,
+      "qpos_max": 21.626195907592773,
+      "qvel_max": 194.3074951171875,
+      "target_max": 18.228378295898438
+    },
+    {
+      "step": 1849,
+      "qpos_max": 21.900054931640625,
+      "qvel_max": 306.50909423828125,
+      "target_max": 45.55585479736328
+    },
+    {
+      "step": 1850,
+      "qpos_max": 21.466026306152344,
+      "qvel_max": 2811.024169921875,
+      "target_max": 476.04315185546875
+    },
+    {
+      "step": 1851,
+      "qpos_max": 1370909440.0,
+      "qvel_max": 274182520832.0,
+      "target_max": 43524349952.0
+    }
+  ],
+  "clip_id": 8,
+  "clip_name": "g1/fallAndGetUp1_subject1.csv",
+  "original_onnxruntime_output_finite": true,
+  "original_action_max_abs": 99239854080.0,
+  "converted_action_max_abs": 99239854080.0,
+  "original_onnxruntime_max_abs_error": 90112.0,
+  "onnxruntime_relative_tolerance": 5e-05,
+  "max_constraint_count": 112,
+  "overflow_flags": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "status": "full_rollout_numerical_failure",
+  "scored_result": false
+}

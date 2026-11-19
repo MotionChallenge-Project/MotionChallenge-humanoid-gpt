@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "source_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "weights_sha256": "96f57244ec49ef43fed6e141b79a585550593f2247d1101ed1dfd931136d93aa",
+  "graph_sha256": "c57f26cd10c96bd6714a5c868faebaf72ef11b5967b1ff5e5a76ba41886d5561",
+  "device": "cuda:1",
+  "batches": [
+    {
+      "batch": 1,
+      "max_abs_error": {
+        "continuous_actions": 3.814697265625e-06
+      }
+    },
+    {
+      "batch": 7,
+      "max_abs_error": {
+        "continuous_actions": 9.5367431640625e-06
+      }
+    },
+    {
+      "batch": 40,
+      "max_abs_error": {
+        "continuous_actions": 1.0013580322265625e-05
+      }
+    }
+  ],
+  "max_abs_error": 1.0013580322265625e-05,
+  "tolerance_abs": 5e-05,
+  "tolerance_rel": 2e-05,
+  "reference": "Original ONNX ReferenceEvaluator per sample"
+}

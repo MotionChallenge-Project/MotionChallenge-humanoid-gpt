@@ -1,0 +1,18 @@
+{
+  "model": "humanoid-gpt",
+  "status": "passed",
+  "errors": [],
+  "core_commit": "2221fab60a90adc3c85b1dfd438e00244fb58263",
+  "runtime_sha256": "ef5eb76b3cdd5d0335b3cb20299476aa5d410c72b705337199a855c36e6b8a27",
+  "locked_environment_and_cli": true,
+  "own_core_import": "/mnt/volumes/nexus-train-bd-ga/swd/motionchallenge-mjwarp/MotionChallenge-humanoid-gpt/MotionChallenge-Core/src/motion_challenge/__init__.py",
+  "admission_and_source_hashes": true,
+  "modules": [
+    "convert_weights",
+    "evaluate",
+    "tensor_adapter",
+    "tensor_common",
+    "tensor_reference",
+    "torch_graph"
+  ]
+}

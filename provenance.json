@@ -34,5 +34,13 @@
     "macOS": "validation/native-parity.json",
     "Linux": "validation/native-parity-linux.json"
   },
-  "checkpoint_architecture": "Released 264 ONNX: 136-input feed-forward MLP, hidden widths 2048/1024/512, 29-action output. See validation/checkpoint-graph.json. Scores do not apply to the separate 216_trans Transformer checkpoint."
+  "checkpoint_architecture": "Released 264 ONNX: 136-input feed-forward MLP, hidden widths 2048/1024/512, 29-action output. See validation/checkpoint-graph.json. Scores do not apply to the separate 216_trans Transformer checkpoint.",
+  "batch_inference_validation": {
+    "original_checkpoint_origin": "validation/checkpoint-origin.json",
+    "conversion": "validation/mjwarp-network-parity.json",
+    "full_batch_network": "validation/full-batch-parity.json",
+    "full_batch_adapter": "validation/full-batch-adapter.json",
+    "observation_history_reset": "validation/tensor-observation-parity.json",
+    "independent_onnxruntime": "validation/onnxruntime-parity.json"
+  }
 }

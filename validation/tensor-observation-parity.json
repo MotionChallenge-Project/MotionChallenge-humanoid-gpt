@@ -1,0 +1,28 @@
+{
+  "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "adapter_source_sha256": {
+    "tensor_common.py": "518fc3b40e5c38078d1d2fce4cf7133f6aa614b442152a01fdbbd5e600401a2e",
+    "tensor_reference.py": "a2cb49dc3e652219d9781557b86369b245b7464371b037d69f45974c819dc1be",
+    "tensor_adapter.py": "f5789a75324f32e5efdda873740efea9650d436cb0402590061ce6365c22ed36"
+  },
+  "graph_sha256": "c57f26cd10c96bd6714a5c868faebaf72ef11b5967b1ff5e5a76ba41886d5561",
+  "status": "passed",
+  "steps": 24,
+  "batch": 7,
+  "joint_order": "reversed canonical names",
+  "partial_reset_step": 11,
+  "partial_reset_slots": [
+    1,
+    4
+  ],
+  "observation_max_abs_error": 7.62939453125e-06,
+  "network_max_abs_error": 2.6702880859375e-05,
+  "joint_target_max_abs_error_rad": 1.1711278047758056e-05,
+  "reference": "Original adapter.py observations and original ONNX per sample",
+  "history": "Matched raw actions isolate observation and inference parity",
+  "observation_tolerance": {
+    "reference_cvel_absolute": 2e-05,
+    "other_absolute": 2e-06,
+    "relative": 2e-06
+  }
+}
