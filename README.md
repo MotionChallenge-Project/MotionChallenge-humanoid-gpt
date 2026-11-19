@@ -22,6 +22,8 @@ uv run evaluate.py --dataset lafan --data /path/to/lafan --weights /path/to/orig
 
 LAFAN uses 40 simulation slots and SEED uses 4096. Each control step runs one full-batch network forward. Finished slots are refilled in longest-motion-first order. `--slots` selects a different capacity. `--cache` sets the local preparation and model conversion cache.
 
+BONES-SEED evaluation uses a feasibility-filtered subset of the original G1 motion data. Download the original archive; Core applies one public inclusion list of 129,561 motions shared by every model.
+
 ## Evaluation contract
 
 The control period is 20 ms with four 5 ms physics substeps. Sliding friction is 1.0 and the Newton solver uses at most 50 iterations. Core precomputes scoring reference FK before rollout and reads actual body poses from MJWarp.
@@ -39,3 +41,5 @@ Each evaluation writes `result.json`, trace files, input hashes and `verificatio
 `validation/full-batch-adapter.json` verifies 4096 active adapter states, a full forward and partial resets. `validation/onnxruntime-parity.json` checks the original ONNX in an independent ONNX Runtime environment.
 
 Inference conversion, original ONNX parity and 4096-slot observation/history/reset checks pass. Complete LAFAN and BONES-SEED rollouts encounter numerical instability under the current evaluation configuration, so this checkpoint has no ranked full-suite score. See `validation/lafan-numerical-failure.json`, `validation/cpu-mjwarp-instability-replay.json` and `validation/seed-numerical-failure.json`. Original ONNX inference on the recorded SEED failure input passes parity; the captured late state also triggers a CPU MuJoCo numerical warning. This replay does not establish a unique cause of the instability.
+
+[Deployment clipping audit](validation/deployment-clipping-audit.json): the author deployment uses unclipped observations, actions and joint targets. PD torques are limited in simulation.

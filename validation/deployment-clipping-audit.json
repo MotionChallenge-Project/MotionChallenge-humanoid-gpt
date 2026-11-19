@@ -1,0 +1,38 @@
+{
+  "status": "deployment_source_audited",
+  "author_commit": "9f9e7b74ecadb532abbb34b6a779d87191a9bbb6",
+  "checkpoint": "storage/ckpts/pns_wo_priv264.onnx",
+  "checkpoint_sha256": "bbaac94ba08d30bd96879e0c5878d60a38180f1cb819a9336cc6b56d49f333f9",
+  "observation_clip": false,
+  "network_action_clip": false,
+  "joint_target_clip": false,
+  "simulation_pd_torque_clip": true,
+  "hardware_python_joint_target_clip": false,
+  "firmware_internal_protection": "outside_public_Python_source_audit",
+  "onnx_operators": {
+    "Gemm": 4,
+    "Sigmoid": 3,
+    "Mul": 3,
+    "Identity": 1
+  },
+  "onnx_input_dimension": 136,
+  "onnx_output_dimension": 29,
+  "adapter_action_clip": null,
+  "sources": {
+    "observation_and_action": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/tracking/infer_utils.py",
+    "onnx_runtime": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/tracking/policy.py",
+    "hardware_commands": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/deploy/real_robot.py",
+    "simulation_torques": "https://github.com/GalaxyGeneralRobotics/Humanoid-GPT/blob/9f9e7b74ecadb532abbb34b6a779d87191a9bbb6/utils/sim_mj.py"
+  },
+  "downloaded_source_sha256": {
+    "deploy/real_robot.py": "005c9e960e184b216b72e70ee61c727d4553a79decd182f58d4ee7db07698d57",
+    "utils/sim_mj.py": "f7c7b2a2559f7376064bb6e22e8166ebb1f545c10e82e7acdcbab26fea32f93b"
+  },
+  "details": [
+    "Raw assembled observations are passed to ONNX without clipping.",
+    "Raw continuous_actions are stored in policy history. Joint targets use the author default angles and action scales without clipping.",
+    "Soft joint bounds are calculated but are not applied by nn2motor_action.",
+    "The hardware Python command path writes target joint positions directly.",
+    "The simulator clamps PD torques; torque limits do not clip policy observations or actions."
+  ]
+}
