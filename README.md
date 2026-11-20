@@ -43,3 +43,7 @@ Each evaluation writes `result.json`, trace files, input hashes and `verificatio
 Inference conversion, original ONNX parity and 4096-slot observation/history/reset checks pass. Complete LAFAN and BONES-SEED rollouts encounter numerical instability under the current evaluation configuration, so this checkpoint has no ranked full-suite score. See `validation/lafan-numerical-failure.json`, `validation/cpu-mjwarp-instability-replay.json` and `validation/seed-numerical-failure.json`. Original ONNX inference on the recorded SEED failure input passes parity; the captured late state also triggers a CPU MuJoCo numerical warning. This replay does not establish a unique cause of the instability.
 
 [Deployment clipping audit](validation/deployment-clipping-audit.json): the author deployment uses unclipped observations, actions and joint targets. PD torques are limited in simulation.
+
+## Metric
+
+MPJPE (Mean Per-Joint Position Error) measures the 3D Euclidean distance between actual and reference keypoint positions. The protocol defines these keypoints at robot body-frame origins: 14 points for G1. Errors are averaged over keypoints and scoring samples within each motion, then motions are weighted equally. Results report full-motion and first-failure-prefix scores with no alignment, XY alignment, and XY + yaw alignment. XY alignment removes pelvis horizontal translation while retaining height error. Leaderboard values are reported in millimetres (mm).
